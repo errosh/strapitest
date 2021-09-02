@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "name": "Organization",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "jobs": {
+      "collection": "job",
+      "via": "organization"
+    }
+  }
+}
